@@ -37,7 +37,9 @@ pre_install() {
 }
 
 configure_php5_fpm() {
-    echo "cgi.fix_pathinfo = 0;" >> /etc/php5/fpm/php.ini
+    echo "upload_max_filesize = 25M;" > /etc/php5/fpm/conf.d/z-rainloop.ini
+    echo "post_max_size = 25M;" >> /etc/php5/fpm/conf.d/z-rainloop.ini
+    echo "cgi.fix_pathinfo = 0;" >> /etc/php5/fpm/conf.d/z-rainloop.ini
     sed -i -e 's/^listen =.*/listen = \/var\/run\/php5-fpm.sock/' /etc/php5/fpm/pool.d/www.conf
 }
 
