@@ -11,6 +11,8 @@ export PACKAGES=(
 	'php5-imagick'
 	'php5-imap'
 	'php5-mcrypt'
+	'php5-sqlite'
+	'php5-pgsql'
 	'php5-gd'
 	'libssh2-php'
 	'php5-memcache'
